@@ -20,7 +20,7 @@ func main() {
 		port = defaultPort
 	}
 
-	articleClient, err := client.NewClient("localhost:50051")
+	articleClient, err := client.NewClient("localhost:8081")
 	if err != nil {
 		articleClient.Close()
 		log.Fatalf("Failed to create article client: %v\n", err)

@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	lis, err := net.Listen("tcp", ":8080")
+	lis, err := net.Listen("tcp", ":8081")
 	if err != nil {
 		log.Fatalf("Failed to listen: %v\n", err)
 	}
@@ -27,7 +27,7 @@ func main() {
 	server := grpc.NewServer()
 	pb.RegisterArticleServiceServer(server, service)
 
-	log.Println("Listening on port 8080...")
+	log.Println("Listening on port 8081...")
 	if err := server.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve: %v", err)
 	}
