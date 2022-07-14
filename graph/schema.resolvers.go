@@ -11,13 +11,28 @@ import (
 	"github.com/smoothbronco/blog_example/graph/model"
 )
 
-// CreateTodo is the resolver for the createTodo field.
-func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) (*model.Todo, error) {
+// CreateArticle is the resolver for the createArticle field.
+func (r *mutationResolver) CreateArticle(ctx context.Context, input model.CreateInput) (*model.Article, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
-// Todos is the resolver for the todos field.
-func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
+// UpdateArticle is the resolver for the updateArticle field.
+func (r *mutationResolver) UpdateArticle(ctx context.Context, input model.UpdateInput) (*model.Article, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+// DeleteArticle is the resolver for the deleteArticle field.
+func (r *mutationResolver) DeleteArticle(ctx context.Context, input int) (int, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+// Article is the resolver for the article field.
+func (r *queryResolver) Article(ctx context.Context, input int) (*model.Article, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+// Articles is the resolver for the articles field.
+func (r *queryResolver) Articles(ctx context.Context) ([]*model.Article, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
